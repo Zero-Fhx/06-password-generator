@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generador de Contraseñas</title>
+    <meta
+      name="description"
+      content="Generador de contraseñas seguras y personalizables."
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Generador de Contraseñas</h1>
+      <div class="container">
+        <form id="password-form">
+          <div class="length-container">
+            <label for="length">Longitud de la contraseña:</label>
+            <span class="length-value" id="length-value">12</span>
+          </div>
+          <input
+            type="range"
+            id="length"
+            name="length"
+            step="1"
+            min="4"
+            max="50"
+            value="12"
+          />
+          <fieldset>
+            <legend>Incluir caracteres:</legend>
+            <label
+              ><input type="checkbox" id="lowercase" checked />
+              Minúsculas</label
+            >
+            <label
+              ><input type="checkbox" id="uppercase" checked />
+              Mayúsculas</label
+            >
+            <label
+              ><input type="checkbox" id="numbers" checked /> Números</label
+            >
+            <label
+              ><input type="checkbox" id="symbols" checked /> Símbolos</label
+            >
+          </fieldset>
+
+          <button id="generate-button" type="submit">Generar Contraseña</button>
+        </form>
+
+        <div id="result">
+          <h2>Contraseña Generada:</h2>
+          <span id="password-display">********</span>
+          <button id="copy-button">Copiar al Portapapeles</button>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
