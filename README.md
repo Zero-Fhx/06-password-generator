@@ -246,12 +246,12 @@ copyButton.addEventListener("click", () => {
 
 ### Conjuntos de Caracteres
 
-| Tipo           | Caracteres         | Cantidad |
-| -------------- | ------------------ | -------- | --- |
-| **Minúsculas** | a-z                | 26       |
-| **Mayúsculas** | A-Z                | 26       |
-| **Números**    | 0-9                | 10       |
-| **Símbolos**   | !@#$%^&\*()\_+[]{} | ;:,.<>?  | 24  |
+| Tipo           | Caracteres                  | Cantidad |
+| -------------- | --------------------------- | -------- |
+| **Minúsculas** | a-z                         | 26       |
+| **Mayúsculas** | A-Z                         | 26       |
+| **Números**    | 0-9                         | 10       |
+| **Símbolos**   | !@#$%^&\*()\_+[]{}\|;:,.<>? | 24       |
 
 ### Características de Seguridad
 
