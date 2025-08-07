@@ -65,18 +65,11 @@ const symbolChars = "!@#$%^&*()_+[]{}|;:,.<>?";
 
 function generatePassword(length, options) {
   let characterSet = "";
-  if (options.includeLowercase) {
-    characterSet += lowercaseChars;
-  }
-  if (options.includeUppercase) {
-    characterSet += uppercaseChars;
-  }
-  if (options.includeNumbers) {
-    characterSet += numberChars;
-  }
-  if (options.includeSymbols) {
-    characterSet += symbolChars;
-  }
+
+  if (options.includeLowercase) characterSet += lowercaseChars;
+  if (options.includeUppercase) characterSet += uppercaseChars;
+  if (options.includeNumbers) characterSet += numberChars;
+  if (options.includeSymbols) characterSet += symbolChars;
 
   if (characterSet.length === 0) {
     return "Debe seleccionar al menos un tipo de carácter.";
