@@ -153,24 +153,24 @@ Este proyecto incluye todas las características esenciales de un generador de c
 ### Generación de Contraseñas Segura
 
 ```javascript
-function generatePassword(length, options) {
-  let characterSet = "";
+function generatePassword (length, options) {
+  let characterSet = ''
 
-  if (options.includeLowercase) characterSet += lowercaseChars;
-  if (options.includeUppercase) characterSet += uppercaseChars;
-  if (options.includeNumbers) characterSet += numberChars;
-  if (options.includeSymbols) characterSet += symbolChars;
+  if (options.includeLowercase) characterSet += lowercaseChars
+  if (options.includeUppercase) characterSet += uppercaseChars
+  if (options.includeNumbers) characterSet += numberChars
+  if (options.includeSymbols) characterSet += symbolChars
 
   if (characterSet.length === 0) {
-    return "Debe seleccionar al menos un tipo de carácter.";
+    return 'Debe seleccionar al menos un tipo de carácter.'
   }
 
-  let password = "";
+  let password = ''
   for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * characterSet.length);
-    password += characterSet[randomIndex];
+    const randomIndex = Math.floor(Math.random() * characterSet.length)
+    password += characterSet[randomIndex]
   }
-  return password;
+  return password
 }
 ```
 
@@ -178,34 +178,34 @@ function generatePassword(length, options) {
 
 ```javascript
 checkBoxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", () => {
-    const isAnyChecked = Array.from(checkBoxes).some((cb) => cb.checked);
+  checkbox.addEventListener('change', () => {
+    const isAnyChecked = Array.from(checkBoxes).some((cb) => cb.checked)
     if (!isAnyChecked) {
-      checkbox.checked = true;
+      checkbox.checked = true
     }
-  });
-});
+  })
+})
 ```
 
 ### Copia al Portapapeles con Feedback
 
 ```javascript
-copyButton.addEventListener("click", () => {
-  const password = passwordDisplay.textContent;
+copyButton.addEventListener('click', () => {
+  const password = passwordDisplay.textContent
   navigator.clipboard
     .writeText(password)
     .then(() => {
-      copyButton.textContent = "Contraseña Copiada!";
-      copyButton.classList.add("copied");
+      copyButton.textContent = 'Contraseña Copiada!'
+      copyButton.classList.add('copied')
       setTimeout(() => {
-        copyButton.textContent = "Copiar al Portapapeles";
-        copyButton.classList.remove("copied");
-      }, 2000);
+        copyButton.textContent = 'Copiar al Portapapeles'
+        copyButton.classList.remove('copied')
+      }, 2000)
     })
     .catch((error) => {
-      console.error("Error al copiar la contraseña: ", error);
-    });
-});
+      console.error('Error al copiar la contraseña: ', error)
+    })
+})
 ```
 
 ### Slider Personalizado CSS
